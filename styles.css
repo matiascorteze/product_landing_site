@@ -1,0 +1,402 @@
+/**General Rules**/
+
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ubuntu:wght@400;500&display=swap');
+
+/** font-family: 'Fugaz One', cursive;
+font-family: 'Ubuntu', sans-serif; **/
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  height: 100%;
+}
+
+:root {
+  --blue: #2d4059;
+  --pink: #ea5455;
+  --orange: #f07b3f;
+  --yellow: #ffd460;
+} 
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  left: 0;
+  top: 0;
+  right:0;
+  margin: 0;
+  padding: 0px;
+  
+}
+
+/**Nav Rules**/
+
+a.nav-link {
+  display: block;
+  position: relative;
+  top: 0px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue);
+  padding: 1rem 0 1rem 0;
+  height: 5rem;
+  top: 0;
+  z-index: 1;
+}
+
+#header-img{
+  height: 5rem;
+  width: auto;
+  filter: contrast(9);
+}
+
+
+#logo {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  padding: 1rem 0 1rem 4rem;
+  
+}
+
+#logo > #logoName {
+  font-size: 3rem;
+  font-family: 'Fugaz One', cursive;
+  color: var(--orange);
+  text-shadow: 1px 1px var(--yellow);
+}
+
+#navigation {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 1rem;
+  width: 40rem;
+}
+
+.nav-link{
+  font-size: 2rem;
+  color: var(--orange);
+  padding: 1rem;
+}
+
+
+.nav-link:hover {
+  font-size: 2rem;
+  color: var(--blue);
+  background-color: var(--orange);
+  transition: color 0.2s ease-in-out;
+  border-radius: 3rem;
+  transition: border-radius 0.3s ease-out;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/**Container Rules**/
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+    ". planets ."
+    ". planets ."
+    ". spaceships ."
+    ". pricing .";
+  margin-top: 5rem;
+  /* background:#CCC; */
+}
+
+
+
+/**Planet Rules**/
+
+#container > #planets {
+  grid-area: planets;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+
+#title {
+  font-family: 'Fugaz One', cursive;
+  font-size: 5rem;
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+
+
+#slogan {
+  font-size: 1.5rem;
+  margin: 1rem 1rem 2rem 1rem;
+  text-align: center;
+}
+
+.iframe-container{
+  padding-bottom: 28%; 
+  position:relative; 
+  display: block; 
+  width: 50%;
+  min-width:30rem;
+}
+
+#video{
+  position:absolute;
+  top:0; 
+  left: 0;
+  width:100%; 
+  height:100%; 
+}
+
+.textBox{
+  display: block;
+  position: relative;
+  font-size: 2rem;
+  width: 70%;
+  line-height: 3rem;
+  margin: 4rem;
+  text-align:center;
+}
+
+#planetPanel{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.planetBlock{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-style: solid;
+  border-width: 2px;
+  padding: 2rem 2rem 0rem 2rem;
+  border-color: var(--yellow);
+  border-radius: 1rem;
+  margin: 0 1rem 1rem 1rem;
+  background-color: var(--blue);
+    
+}
+
+.planetImg{
+  position: relative;
+  width:20rem;
+  height:auto;
+  display: block;
+  margin: 1rem 0 1rem 0;
+  filter: drop-shadow(0px 0px 10px var(--yellow));
+}
+
+.planetName{
+  font-size:2rem;
+  display: flex;
+  margin: 0rem auto 1.5rem auto;
+  position:relative;
+  text-align: center;
+  color: var(--orange);
+  text-shadow: 1px 1px var(--yellow);
+  align-self: start;
+}
+
+.planetDesc{
+  font-size: 1.5rem;
+  width:20rem;
+  text-align: left;
+  color:white;
+}
+
+h4{
+  display: flex;
+  color:white;
+  text-align:right;
+  flex-direction: column-reverse;
+  margin-top:auto;
+}
+
+/**Spaceships Rules**/
+
+#container > #spaceships {
+  grid-area: spaceships;
+}
+
+#spaceshipPic{
+  position: relative;
+  display: block;
+  width: 90%;
+  margin: auto;
+  border-radius:1rem;
+  box-shadow: 0px 10px 0px var(--pink), 0px 20px 0px var(--yellow), 0px 10px 0px var(--pink);
+  
+}
+
+/**Pricing Rules**/
+
+#container > #pricing {
+  grid-area: pricing;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#form > #email{
+  display: block;
+  width: 60%;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
+  color: var(--blue);
+  box-sizing: border-box;
+  border: solid 3px;
+  border-radius: 1rem;
+  border-color: var(--blue);
+}
+
+#form > #email:focus{
+  border-color: var(--pink);
+  transition: border-color 0.4s ease-in-out;
+}
+
+::placeholder { 
+  color: var(--blue);
+  opacity: 0.5;
+}
+
+#form > #submit{
+  display: block;
+  width: 60%;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
+  color: white;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--blue);
+  min-width: 15rem;
+  box-shadow: 0px 0px 0px var(--yellow),0px 0px 0px var(--yellow);
+}
+
+#form > #submit:hover{
+  color: var(--yellow);
+  transition: color 0.4s ease-in-out;
+  width: 15%;
+  transition: width 1s ease-in-out,box-shadow 1s ease-in-out, color 1s ease-in-out;
+  box-shadow: 10px 0px 0px var(--yellow),
+             -10px 0px 0px var(--yellow), 
+              20px 0px 0px var(--pink),
+             -20px 0px 0px var(--pink);
+}
+
+#priceBlock{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;  
+  flex-wrap: wrap;
+  margin: 0 0 5rem 0;
+  padding-inline-start: 0px;
+  
+}
+
+.listTitle{
+  font-family: 'Fugaz One', cursive;
+  font-size: 3rem;
+  list-style: none;
+  list-style-position: outside;
+  line-height: 5rem;
+  color: var(--pink);
+  padding: 3rem;
+  
+}
+
+.listItem{
+  font-family: 'Ubuntu', sans-serif;
+  list-style-type: square;
+  font-size: 2rem;
+  list-style: disc;
+  list-style-position: side;
+  color: var(--blue);
+}
+
+.listPrice{
+  font-family: 'Ubuntu', sans-serif;
+  list-style-type: square;
+  list-style: disc;
+}
+
+/**General Responsive Rules **/
+
+@media (max-width: 700px) {
+  #container{
+    margin-top:11.7rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "planets"
+      "planets"
+      "spaceships"
+      "pricing";
+  }
+  html{
+    scroll-padding-top: 10.4rem;
+  }
+  
+}
+
+@media (max-width: 700px){
+  #title {
+    font-size: 3rem;
+  }
+  .textBox{
+  width: 90%;
+  font-size: 1.7rem;
+}
+  .iframe-container{
+  padding-bottom: 34%; 
+}
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 11rem;
+  }
+  
+  #logo {
+    height: 1rem;
+    padding: 0;
+    margin-top: 2rem;
+}
+  #navigation {
+    margin: 2rem;
+    width: 85%;
+  }
+ 
+}
+
+
+
+
+
